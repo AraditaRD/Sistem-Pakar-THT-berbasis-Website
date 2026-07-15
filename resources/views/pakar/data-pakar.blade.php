@@ -373,6 +373,7 @@ Tambah Pakar
                 <label>Password Baru (Opsional)</label>
 
                 <input
+                 id="edit_password"
                 type="password"
                 name="password"
                 class="w-full border rounded-lg p-3">
@@ -384,6 +385,7 @@ Tambah Pakar
                 <label>Konfirmasi Password</label>
 
                 <input
+                id="edit_password_confirmation"
                 type="password"
                 name="password_confirmation"
                 class="w-full border rounded-lg p-3">
@@ -429,14 +431,17 @@ Tambah Pakar
 
                 function editPakar(id,nama,email,nohp){
 
-                document.getElementById('edit_name').value=nama;
-                document.getElementById('edit_email').value=email;
-                document.getElementById('edit_no_hp').value=nohp;
+                    document.getElementById('edit_name').value = nama;
+                    document.getElementById('edit_email').value = email;
+                    document.getElementById('edit_no_hp').value = nohp;
 
-                document.getElementById('formEdit').action="/pakar/pakar/"+id;
+                    // kosongkan password setiap buka modal
+                    document.getElementById('edit_password').value = '';
+                    document.getElementById('edit_password_confirmation').value = '';
 
-                document.getElementById('modalEdit').classList.remove('hidden');
+                    document.getElementById('formEdit').action="/pakar/pakar/"+id;
 
+                    document.getElementById('modalEdit').classList.remove('hidden');
                 }
 
                 // =========================

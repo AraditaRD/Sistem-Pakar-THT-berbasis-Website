@@ -68,29 +68,34 @@ public function store(Request $request)
 {
     $user = User::findOrFail($id);
 
-    $request->validate([
-        'name' => 'required|max:100',
+    $rules = [
+        'name'  => 'required|max:100',
         'email' => 'required|email|unique:users,email,' . $id,
-        'no_hp' => 'required|max:20',
-    ]);
+        'no_hp' => 'required|regex:/^[0-9]+$/|min:10|max:15',
+    ];
 
-    $user->name = $request->name;
+    // Validasi password HANYA jika password diisi
+    if ($request->password != '') {
+
+        $rules['password'] = 'required|confirmed|min:8';
+
+    }
+
+    $request->validate($rules);
+
+    $user->name  = $request->name;
     $user->email = $request->email;
     $user->no_hp = $request->no_hp;
 
-    // jika password diisi
-    if ($request->filled('password')) {
-
-        $request->validate([
-            'password' => 'confirmed|min:8'
-        ]);
-
+    if ($request->password != '') {
         $user->password = Hash::make($request->password);
     }
 
     $user->save();
 
-    return back()->with('success', 'Data pakar berhasil diupdate.');
+    return redirect()
+            ->route('pakar.pakar')
+            ->with('success','Data pakar berhasil diupdate.');
 }
 
     public function destroy($id)
