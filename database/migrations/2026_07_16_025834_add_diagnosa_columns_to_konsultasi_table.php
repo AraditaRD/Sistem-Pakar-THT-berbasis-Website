@@ -20,10 +20,6 @@ return new class extends Migration
                 ->default(0)
                 ->after('penyakit_id');
 
-            $table->json('kemungkinan_lain')
-                ->nullable()
-                ->after('persentase');
-
         });
     }
 
@@ -36,7 +32,6 @@ return new class extends Migration
             $table->dropColumn([
                 'penyakit_id',
                 'persentase',
-                'kemungkinan_lain'
             ]);
 
         });
