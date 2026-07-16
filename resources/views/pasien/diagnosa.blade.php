@@ -8,34 +8,34 @@
 <div id="warningModal"
     class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
 
-    <div class="bg-white rounded-2xl shadow-xl w-full max-w-2xl relative mx-4">
+    <div class="bg-white rounded-2xl shadow-xl w-[94%]sm:w-full max-w-2xl max-h-[90vh] overflow-y-auto relative mx-auto">
 
         <!-- Tombol Close -->
         <button
             onclick="closeWarning()"
-            class="absolute top-4 right-5 text-gray-400 hover:text-red-500 text-2xl">
+            class="absolute top-3 right-3 sm:top-4 sm:right-5 text-gray-400 hover:text-red-500 text-xl sm:text-2xl">
 
             &times;
 
         </button>
 
-        <div class="p-8">
+        <div class="p-5 sm:p-8">
 
-            <div class="flex items-center mb-5">
+            <div class="flex items-start sm:items-center mb-5">
 
-                <div class="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
 
-                    <i class="fas fa-triangle-exclamation text-yellow-500 text-2xl"></i>
+                    <i class="fas fa-triangle-exclamation text-yellow-500 text-xl sm:text-2xl"></i>
 
                 </div>
 
                 <div>
 
-                    <h2 class="text-2xl font-bold text-gray-800">
+                    <h2 class="text-xl sm:text-3xl font-bold text-gray-800 leading-tight">
                         Perhatian Sebelum Diagnosa
                     </h2>
 
-                    <p class="text-gray-500">
+                    <p class="text-sm sm:text-base text-gray-500">
                         Mohon baca informasi berikut terlebih dahulu.
                     </p>
 
@@ -43,13 +43,13 @@
 
             </div>
 
-            <div class="space-y-4 text-gray-700 leading-7">
+            <div class="space-y-3 sm:space-y-5 text-sm sm:text-base text-gray-700 leading-7">
 
                 <p>
                     Mohon jawab setiap pertanyaan gejala sesuai dengan kondisi yang benar-benar Anda alami agar sistem dapat memberikan hasil diagnosa yang lebih akurat.
                 </p>
 
-                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 sm:p-5 rounded-lg">
 
                     <b>Catatan Penting</b>
 
@@ -65,11 +65,11 @@
 
             </div>
 
-            <div class="mt-8 text-right">
+            <div class="mt-6 sm:mt-8 text-center sm:text-right">
 
                 <button
                     onclick="closeWarning()"
-                    class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg">
+                    class="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto px-5 py-2.5 rounded-lg font-medium">
 
                     Saya Mengerti
 
