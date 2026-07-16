@@ -1,4 +1,5 @@
 <?php
+
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
@@ -9,34 +10,49 @@ class GejalaSeeder extends Seeder
     public function run(): void
     {
         $data = [
-            // Telinga
-            ['kode'=>'G001','nama'=>'Nyeri telinga',              'kategori'=>'Telinga'],
-            ['kode'=>'G002','nama'=>'Telinga berdenging',         'kategori'=>'Telinga'],
-            ['kode'=>'G003','nama'=>'Gangguan pendengaran',       'kategori'=>'Telinga'],
-            ['kode'=>'G004','nama'=>'Keluar cairan dari telinga', 'kategori'=>'Telinga'],
-            ['kode'=>'G005','nama'=>'Telinga gatal',              'kategori'=>'Telinga'],
-            ['kode'=>'G006','nama'=>'Telinga terasa penuh',       'kategori'=>'Telinga'],
-            ['kode'=>'G007','nama'=>'Pusing berputar',            'kategori'=>'Telinga'],
-            ['kode'=>'G008','nama'=>'Mual saat bergerak kepala',  'kategori'=>'Telinga'],
 
-            // Hidung
-            ['kode'=>'G009','nama'=>'Hidung tersumbat',           'kategori'=>'Hidung'],
-            ['kode'=>'G010','nama'=>'Bersin-bersin',              'kategori'=>'Hidung'],
-            ['kode'=>'G011','nama'=>'Hidung berair (encer)',      'kategori'=>'Hidung'],
-            ['kode'=>'G012','nama'=>'Mata gatal atau berair',     'kategori'=>'Hidung'],
-            ['kode'=>'G013','nama'=>'Nyeri wajah atau pipi',      'kategori'=>'Hidung'],
-            ['kode'=>'G014','nama'=>'Lendir hidung kuning/hijau', 'kategori'=>'Hidung'],
-            ['kode'=>'G015','nama'=>'Sakit kepala',               'kategori'=>'Hidung'],
+            // ===========================
+            // TELINGA
+            // ===========================
+            ['kode'=>'G001','nama'=>'Penurunan pendengaran','kategori'=>'Telinga'],
+            ['kode'=>'G002','nama'=>'Telinga terasa ketutup','kategori'=>'Telinga'],
+            ['kode'=>'G003','nama'=>'Telinga nyeri','kategori'=>'Telinga'],
+            ['kode'=>'G004','nama'=>'Telinga gatal','kategori'=>'Telinga'],
+            ['kode'=>'G005','nama'=>'Telinga keluar cairan','kategori'=>'Telinga'],
+            ['kode'=>'G006','nama'=>'Telinga berdengung','kategori'=>'Telinga'],
+            ['kode'=>'G007','nama'=>'Pusing','kategori'=>'Telinga'],
+            ['kode'=>'G008','nama'=>'Vertigo','kategori'=>'Telinga'],
+            ['kode'=>'G009','nama'=>'Gangguan keseimbangan','kategori'=>'Telinga'],
+            ['kode'=>'G010','nama'=>'Mual','kategori'=>'Telinga'],
+            ['kode'=>'G011','nama'=>'Telinga terasa ada tekanan','kategori'=>'Telinga'],
+            ['kode'=>'G012','nama'=>'Telinga terasa terbakar atau panas','kategori'=>'Telinga'],
 
-            // Tenggorokan
-            ['kode'=>'G016','nama'=>'Sakit tenggorokan',           'kategori'=>'Tenggorokan'],
-            ['kode'=>'G017','nama'=>'Sulit menelan',               'kategori'=>'Tenggorokan'],
-            ['kode'=>'G018','nama'=>'Amandel membesar',            'kategori'=>'Tenggorokan'],
-            ['kode'=>'G019','nama'=>'Bercak putih di tenggorokan', 'kategori'=>'Tenggorokan'],
-            ['kode'=>'G020','nama'=>'Suara serak',                 'kategori'=>'Tenggorokan'],
-            ['kode'=>'G021','nama'=>'Kehilangan suara',            'kategori'=>'Tenggorokan'],
-            ['kode'=>'G022','nama'=>'Batuk',                       'kategori'=>'Tenggorokan'],
-            ['kode'=>'G023','nama'=>'Demam',                       'kategori'=>'Tenggorokan'],
+            // ===========================
+            // HIDUNG
+            // ===========================
+            ['kode'=>'G013','nama'=>'Pilek','kategori'=>'Hidung'],
+            ['kode'=>'G014','nama'=>'Bersin-bersin','kategori'=>'Hidung'],
+            ['kode'=>'G015','nama'=>'Hidung mampet','kategori'=>'Hidung'],
+            ['kode'=>'G016','nama'=>'Dahi atau pipi sakit','kategori'=>'Hidung'],
+            ['kode'=>'G017','nama'=>'Demam','kategori'=>'Hidung'],
+            ['kode'=>'G018','nama'=>'Bau tak sedap dari lubang hidung','kategori'=>'Hidung'],
+
+            // ===========================
+            // TENGGOROKAN
+            // ===========================
+            ['kode'=>'G019','nama'=>'Sakit tenggorokan','kategori'=>'Tenggorokan'],
+            ['kode'=>'G020','nama'=>'Nyeri saat menelan','kategori'=>'Tenggorokan'],
+            ['kode'=>'G021','nama'=>'Batuk-batuk','kategori'=>'Tenggorokan'],
+            ['kode'=>'G022','nama'=>'Suara serak','kategori'=>'Tenggorokan'],
+            ['kode'=>'G023','nama'=>'Bau mulut','kategori'=>'Tenggorokan'],
+            ['kode'=>'G024','nama'=>'Sakit perut','kategori'=>'Tenggorokan'],
+            ['kode'=>'G025','nama'=>'Muncul bercak putih pada tonsil/amandel','kategori'=>'Tenggorokan'],
+            ['kode'=>'G026','nama'=>'Tonsil/amandel yang membesar terus-menerus','kategori'=>'Tenggorokan'],
+
+            // ===========================
+            // KULIT
+            // ===========================
+            ['kode'=>'G027','nama'=>'Muncul ruam pada kulit','kategori'=>'Kulit'],
         ];
 
         foreach ($data as &$row) {
