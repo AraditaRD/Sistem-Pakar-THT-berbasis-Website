@@ -25,7 +25,6 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             PenyakitSeeder::class,
             GejalaSeeder::class,
-            PencegahanSeeder::class,
             RuleSeeder::class,
         ]);
     }
