@@ -13,7 +13,7 @@
         <!-- Tombol Close -->
         <button
             onclick="closeWarning()"
-            class="absolute top-3 right-3 sm:top-4 sm:right-5 text-gray-400 hover:text-red-500 text-xl sm:text-2xl">
+            class="absolutetop-3 right-3 sm:top-4 sm:right-5 text-gray-400 hover:text-red-500 text-xl sm:text-2xl">
 
             &times;
 
@@ -755,7 +755,17 @@ function simpanDiagnosa(hasil,kemungkinanLain){
 
     })
 
-    .then(res=>res.json())
+    .then(async response => {
+
+    console.log("STATUS :", response.status);
+
+    const data = await response.json();
+
+    console.log("DATA :", data);
+
+    return data;
+
+})
 
     .then(res => {
 
@@ -786,10 +796,13 @@ function simpanDiagnosa(hasil,kemungkinanLain){
 
     } else {
 
-        hideLoading();
-        alert(res.message);
+    hideLoading();
 
-    }
+    console.error(res);
+
+    alert(res.error ?? res.message ?? "Terjadi kesalahan saat menyimpan hasil diagnosa.");
+
+}
 
 });
 
